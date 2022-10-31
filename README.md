@@ -6,6 +6,12 @@
 
 - Node Package Manager es un gestor de dependencias de javascript, con el cual podemos administrar las dependencias e incluso crear las nuestras propias.
 
+## Instalación NPM
+
+- `sudo su` Entramos a modo de super usuario para poder instalar todo mas sencillo.
+- `apt update && apt upgrade` Actualizamos los paquetes.
+- `apt install nodejs npm` Instalamos Nodejs y NPM.
+
 ## Primeros pasos
 
 - Primero necesitamos tener un espacio de trabajo, para evitar problemas. -> take "workspace".
