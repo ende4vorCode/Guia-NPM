@@ -72,6 +72,26 @@
 - Existe una flag importante, sobre todo para el tema de pasar el proyecto a producción, tomemos el ejemplo anterior en el cual estamos utilizando React, utilizamos el comando `npm run build -dd` -dd es la flag que nos muestra la información completamente detallada del proceso.
 
 ## Crear un paquete y publicarlo.
+
 - Primero debemos crear una cuenta en [npm](https://www.npmjs.com/)
 - Ahora debemos crear un proyecto en [GitHub](https://github.com/) El cual debe tener el mismo nombre que el paquete que subiremos.
-- Verificamos en la pagina de npm si es que el proyecto ya existe. Si no existe creamos el repositorio que creamos.
+- Verificamos en la pagina de npm si es que el proyecto ya existe. Si no existe creamos el repositorio y luego lo clonamos.
+- Aquí inicializamos el proyecto con `npm init -y`
+- Ahora dentro del proyecto podemos modificar y crear nuestro proyecto según sea necesario.
+- También debemos crear una carpeta /bin el cual contendrá un archivo global.js, aquí es donde se ejecutara lo que exportamos. Esto dependerá dependiendo del proyecto que necesites hacer.
+- En el package.json crearemos un elemento con la siguiente forma: `"bin": {"comando" : "./bin/global.js"}, "preferGlobal" : true` Con esto el paquete tiene lo necesario.
+- Para probar el paquete `npm link` si no tiene vulnerabilidades esta listo, sino, hay que revisar.
+- `pwd` para buscar la ruta absoluta del paquete, ya que aun no esta publicado, entonces es necesario para que sea instalado y probado.
+- Ahora lo probamos. Si todo funciona bien, esta listo para ser publicado.
+- En consola `npm adduser` con este comando podemos conectar nuestro repositorio con npm (debes poner usuario y contraseña).
+- `npm publish` PUBLICAMOS EL PROYECTOOOO!!!! Esto lo verificaremos en el dashboard de NPM.
+
+## Actualizaciones para nuestro paquete
+
+- Si recuerdas cuando creamos el proyecto con `npm init` en una parte nos dice version 1.0.0 esto tiene el siguiente significado MAYOR.MENOR.PARCHE -> Osea que al inicio es como una nueva version, la segunda es un cambio menor y la ultima es una corrección minima dentro del proyecto (En Minecraft es común ver esto como por ejemplo la version 1.7.4). [Mas info](https://semver.org/lang/es/).
+- De acuerdo a las necesidades que tengamos en nuestro proyecto, podemos irlo mejorando constantemente y posteriormente publicarlo.
+- Para actualizar, lo primero es subir los cambios a GitHub.
+- Ahora `npm version "1.x.x"` Según necesites, aquí cambiamos la version.
+- `npm publish` Publicamos la version nueva de nuestro paquete.
+
+[Ende4vor](https://www.github.com/ende4vorcode)
