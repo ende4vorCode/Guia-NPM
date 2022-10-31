@@ -6,6 +6,12 @@
 
 - Node Package Manager es un gestor de dependencias de javascript, con el cual podemos administrar las dependencias e incluso crear las nuestras propias.
 
+## Instalación NPM
+
+- `sudo su` Entramos a modo de super usuario para poder instalar todo mas sencillo.
+- `apt update && apt upgrade` Actualizamos los paquetes.
+- `apt install nodejs npm` Instalamos Nodejs y NPM.
+
 ## Primeros pasos
 
 - Primero necesitamos tener un espacio de trabajo, para evitar problemas. -> take "workspace".
@@ -69,7 +75,7 @@
 - `rm -rf node_modules` Eliminamos la carpeta.
 - El package-lock.json contiene la información detallada de los componentes del proyecto, este se crea al instalar las dependencias con npm.
 - `"phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit"` Este comando eliminara el package-lock.json y el node_modules, posteriormente instalara todo correctamente.
-- Existe una flag importante, sobre todo para el tema de pasar el proyecto a producción, tomemos el ejemplo anterior en el cual estamos utilizando React, utilizamos el comando `npm run build -dd` -dd es la flag que nos muestra la información completamente detallada del proceso.
+- Existe una flag importante, sobre todo para el tema de pasar el proyecto a producción, tomemos el ejemplo anterior en el cual estamos utilizando React, utilizamos el comando `npm run build --dd` --dd es la flag que nos muestra la información completamente detallada del proceso.
 
 ## Crear un paquete y publicarlo.
 
