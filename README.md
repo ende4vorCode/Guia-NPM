@@ -69,7 +69,7 @@
 - `rm -rf node_modules` Eliminamos la carpeta.
 - El package-lock.json contiene la información detallada de los componentes del proyecto, este se crea al instalar las dependencias con npm.
 - `"phoenix": "rm -f package-lock.json && rm -rf ./node_modules && npm install --no-fund --no-audit"` Este comando eliminara el package-lock.json y el node_modules, posteriormente instalara todo correctamente.
-- Existe una flag importante, sobre todo para el tema de pasar el proyecto a producción, tomemos el ejemplo anterior en el cual estamos utilizando React, utilizamos el comando `npm run build -dd` -dd es la flag que nos muestra la información completamente detallada del proceso.
+- Existe una flag importante, sobre todo para el tema de pasar el proyecto a producción, tomemos el ejemplo anterior en el cual estamos utilizando React, utilizamos el comando `npm run build --dd` --dd es la flag que nos muestra la información completamente detallada del proceso.
 
 ## Crear un paquete y publicarlo.
 
